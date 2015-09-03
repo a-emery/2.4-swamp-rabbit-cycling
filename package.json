@@ -1,0 +1,20 @@
+{
+  "name": "2.4-swamp-rabbit-cycling",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "sass": "node-sass -rw assets/scss -o assets/css"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/a-emery/2.4-swamp-rabbit-cycling.git"
+  },
+  "author": "Aaron Emery",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/a-emery/2.4-swamp-rabbit-cycling/issues"
+  },
+  "homepage": "https://github.com/a-emery/2.4-swamp-rabbit-cycling#readme"
+}
