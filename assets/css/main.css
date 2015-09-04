@@ -1,39 +1,56 @@
 html {
   box-sizing: border-box; }
 
-*,
-*::after,
-*::before {
+*, *::after, *::before {
   box-sizing: inherit; }
 
+@font-face {
+  font-family: "Bleeding Cowboy";
+  src: url("../Bleeding_Cowboys.ttf"); }
+@font-face {
+  font-family: "Orbitron";
+  src: url("../Orbitron-Medium.ttf"); }
 body {
-  margin: 0 auto;
-  background: black; }
+  font-family: "Roboto";
+  margin: 0 auto; }
 
 p {
-  color: white;
-  text-align: center; }
+  text-align: center;
+  font-family: "Roboto";
+  font-weight: 300; }
 
 .banner {
-  background: linear-gradient(rgba(0, 0, 0, 0.45), rgba(0, 0, 0, 0.45)), url("../img/banner-bg.png");
+  background: linear-gradient(rgba(250, 250, 250, 0.6), rgba(250, 250, 250, 0.6)), url(../img/maybe-another-background.jpeg) no-repeat center center;
   background-size: cover;
-  background-position: bottom;
-  height: 150px;
-  padding: 10px;
+  padding-top: 10px;
   text-align: center;
-  color: white; }
+  color: black;
+  height: 250px;
+  position: relative; }
+
+.header-content {
+  position: relative;
+  top: 12%;
+  transform: translateY(0); }
 
 .logo {
   width: 200px;
-  padding-right: 10px;
-  position: relative; }
+  padding: 10px;
+  position: relative;
+  background: rgba(0, 0, 0, 0.6); }
 
 .subtitle {
+  font-family: "Roboto";
   font-size: 1rem;
+  display: inline-block;
   margin-top: 0;
   margin-bottom: 0;
-  margin: 0 30px;
-  font-weight: normal; }
+  padding: 5px;
+  margin: 0 40px;
+  font-weight: normal;
+  background: rgba(0, 0, 0, 0.6);
+  color: #e0dcd0;
+  font-weight: 300; }
 
 .banner-title {
   margin-top: 0;
@@ -49,7 +66,7 @@ p {
 .social-icons {
   margin: 0;
   padding: 0;
-  position: fixed;
+  position: absolute;
   top: 5px;
   right: 5px;
   list-style: none;
@@ -61,13 +78,22 @@ p {
 
 .social-icon-image {
   width: 30px;
-  background: grey;
-  border-radius: 100%; }
+  border-radius: 100%;
+  transition: all, 200ms, ease-in; }
+
+.social-icon-image:hover {
+  background: rgba(0, 0, 0, 0.2); }
 
 .nav-bar {
   height: 30px;
-  background: black;
-  position: relative; }
+  background: #ec612f;
+  position: relative;
+  margin-top: 5px;
+  margin-bottom: 0;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0; }
 
 .nav-items {
   float: left;
@@ -80,9 +106,16 @@ p {
   display: inline-block;
   position: relative;
   top: 50%;
-  transform: translateY(-50%); }
+  transform: translateY(-50%);
+  font-family: "Orbitron"; }
   .nav-items:last-child {
     margin-right: 0; }
+
+.nav-link {
+  text-transform: uppercase; }
+
+.nav-item:hover {
+  color: rgba(250, 250, 250, 0.6); }
 
 .nav-item {
   float: left;
@@ -90,10 +123,14 @@ p {
   margin-right: 2.35765%;
   width: 31.76157%;
   display: inline-block;
-  color: white;
+  color: black;
   text-align: center; }
   .nav-item:last-child {
     margin-right: 0; }
+
+.content-background {
+  width: 100%;
+  background: rgba(250, 250, 250, 0.6); }
 
 .content-container {
   max-width: 68em;
@@ -109,7 +146,7 @@ p {
   display: block;
   margin-right: 2.35765%;
   width: 100%;
-  padding: 0 15px; }
+  padding: 0; }
   .image-slider:last-child {
     margin-right: 0; }
 
@@ -117,21 +154,43 @@ p {
   float: left;
   display: block;
   margin-right: 2.35765%;
-  width: 100%;
-  padding: 15px; }
+  width: 100%; }
   .image-slider-image:last-child {
     margin-right: 0; }
 
 .about-us-title {
-  color: white;
   text-align: center;
   margin-top: 0;
   margin-bottom: 0;
-  font-size: 2rem; }
+  font-size: 2rem;
+  font-family: "Bleeding Cowboy"; }
 
 .background-text {
   padding: 15px;
   margin-top: 0;
   margin-bottom: 0;
   text-align: justify;
-  display: inline-block; }
+  display: inline-block;
+  font-family: "Roboto";
+  font-weight: 300; }
+
+.google-machine {
+  padding: 50px; }
+
+.contact-link {
+  text-decoration: none;
+  display: block;
+  text-align: center;
+  margin-top: 3px;
+  margin-bottom: 3px;
+  color: black;
+  font-family: "Roboto";
+  font-weight: 300; }
+
+footer {
+  background: #e0dcd0;
+  padding: 10px;
+  text-align: center;
+  margin-top: 20px; }
+
+/*# sourceMappingURL=main.css.map */

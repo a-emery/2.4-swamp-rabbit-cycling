@@ -1,20 +1,59 @@
 {
-  "name": "2.4-swamp-rabbit-cycling",
-  "version": "1.0.0",
-  "description": "",
+  "name": "sassafras_io",
+  "version": "0.1.1",
+  "description": "A multi-language CSS compiler for SASS, SCSS, and everything in between (aKa LESS).",
   "main": "index.js",
+  "dependencies": {
+    "grunt": "~0.4.2",
+    "grunt-contrib-less": "~0.8.2",
+    "grunt-contrib-sass": "~0.9.2",
+    "grunt-contrib-watch": "~0.6.0",
+    "grunt-concurrent": "~2.0.3"
+  },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "sass": "node-sass -rw assets/scss -o assets/css"
+    "test": "node gruntfile.js"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/a-emery/2.4-swamp-rabbit-cycling.git"
+    "url": "git+ssh://git@github.com/tylerreckart/sassafras_io.git"
   },
-  "author": "Aaron Emery",
+  "keywords": [
+    "SASS",
+    "SCSS",
+    "LESS",
+    "CSS",
+    "Compiler"
+  ],
+  "author": {
+    "name": "Tyler Reckart",
+    "email": "tyler.reckart@gmail.com",
+    "url": "http://tylerreckart.com"
+  },
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/a-emery/2.4-swamp-rabbit-cycling/issues"
+    "url": "https://github.com/tylerreckart/sassafras_io/issues"
   },
-  "homepage": "https://github.com/a-emery/2.4-swamp-rabbit-cycling#readme"
+  "homepage": "https://github.com/tylerreckart/sassafras_io#readme",
+  "gitHead": "e5c231a80bd0ebea0eb3e930acb9a9ab81aed3ff",
+  "_id": "sassafras_io@0.1.1",
+  "_shasum": "c157597779a46a873643a444f52f448099a56137",
+  "_from": "sassafras_io@*",
+  "_npmVersion": "2.14.1",
+  "_nodeVersion": "0.12.7",
+  "_npmUser": {
+    "name": "tylerreckart",
+    "email": "tyler.reckart@gmail.com"
+  },
+  "dist": {
+    "shasum": "c157597779a46a873643a444f52f448099a56137",
+    "tarball": "http://registry.npmjs.org/sassafras_io/-/sassafras_io-0.1.1.tgz"
+  },
+  "maintainers": [
+    {
+      "name": "tylerreckart",
+      "email": "tyler.reckart@gmail.com"
+    }
+  ],
+  "directories": {},
+  "_resolved": "https://registry.npmjs.org/sassafras_io/-/sassafras_io-0.1.1.tgz"
 }
