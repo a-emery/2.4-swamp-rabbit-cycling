@@ -7,11 +7,6 @@ $logo-blue: rgba(27, 54, 106, 1);
 $logo-grey: rgba(224, 220, 208, 1);
 
 @font-face {
-  font-family: "Bleeding Cowboy";
-  src: url("../Bleeding_Cowboys.ttf");
-}
-
-@font-face {
   font-family: "Orbitron";
   src: url("../Orbitron-Medium.ttf");
 }
@@ -124,6 +119,7 @@ p {
   top: 50%;
   transform: translateY(-50%);
   font-family: "Orbitron";
+  font-size: .8rem;
 }
 
 .nav-link {
@@ -153,16 +149,17 @@ p {
 .image-slider {
   @include span-columns(12);
   padding: 0;
+  display: block;
+  margin-bottom: 40px;
 }
 
 .image-slider-image {
   @include span-columns(12 of 12);
+  display: block;
 }
 
-
-
 .about-us-title {
-
+  display: block;
   text-align: center;
   margin-top: 0;
   margin-bottom: 0;
@@ -175,7 +172,7 @@ p {
 .background-text {
   padding: 15px;
   margin-top: 0;
-  margin-bottom: 0;
+  margin-bottom: 50px;
   text-align: justify;
   display: inline-block;
   font-family: "Roboto";
