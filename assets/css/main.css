@@ -17,24 +17,47 @@ p {
   font-weight: 300; }
 
 .banner {
-  background: linear-gradient(rgba(250, 250, 250, 0.6), rgba(250, 250, 250, 0.6)), url(../img/maybe-another-background.jpeg) no-repeat center center;
+  background: linear-gradient(rgba(250, 250, 250, 0.8), rgba(250, 250, 250, 0.8)), url(../img/maybe-another-background.png) no-repeat center center;
   background-size: cover;
   padding-top: 10px;
   text-align: center;
   color: black;
   height: 250px;
   position: relative; }
+  @media screen and (min-width: 480px) {
+    .banner {
+      height: 400px; } }
 
 .header-content {
   position: relative;
   top: 12%;
   transform: translateY(0); }
 
-.logo {
+.logo-container {
+  width: 100%; }
+
+.mobile-logo {
   width: 200px;
   padding: 10px;
   position: relative;
   background: rgba(0, 0, 0, 0.6); }
+  @media screen and (min-width: 480px) {
+    .mobile-logo {
+      position: absolute;
+      display: none;
+      visibility: none; } }
+
+.desktop-logo {
+  display: none; }
+  @media screen and (min-width: 480px) {
+    .desktop-logo {
+      display: block;
+      text-align: center;
+      width: 80%;
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 5px;
+      background: rgba(0, 0, 0, 0.6); } }
 
 .subtitle {
   font-family: "Roboto";
@@ -53,9 +76,11 @@ p {
   margin-top: 0;
   font-family: "Orbitron";
   position: relative;
-  top: 50%;
-  transform: translateY(10%);
   display: none; }
+  @media screen and (min-width: 480px) {
+    .banner-title {
+      display: inline;
+      float: left; } }
 
 .title-break {
   display: block; }
@@ -83,14 +108,20 @@ p {
 
 .nav-bar {
   height: 30px;
+  line-height: 30px;
+  vertical-align: middle;
   background: #ec612f;
-  position: relative;
   margin-top: 5px;
   margin-bottom: 0;
   position: absolute;
   bottom: 0;
   left: 0;
   right: 0; }
+  @media screen and (min-width: 480px) {
+    .nav-bar {
+      height: 50px;
+      text-align: center;
+      line-height: 50px; } }
 
 .nav-items {
   float: left;
@@ -102,17 +133,25 @@ p {
   padding: 0;
   display: inline-block;
   position: relative;
-  top: 50%;
-  transform: translateY(-50%);
   font-family: "Orbitron";
   font-size: .8rem; }
   .nav-items:last-child {
     margin-right: 0; }
+  @media screen and (min-width: 480px) {
+    .nav-items {
+      font-size: 1.3rem;
+      text-align: center;
+      position: absolute;
+      left: 50%;
+      transform: translateX(-50%);
+      max-width: 600px; } }
 
 .nav-link {
-  text-transform: uppercase; }
+  text-transform: uppercase;
+  text-decoration: none;
+  color: white; }
 
-.nav-item:hover {
+.nav-link:hover {
   color: rgba(250, 250, 250, 0.6); }
 
 .nav-item {
@@ -125,6 +164,10 @@ p {
   text-align: center; }
   .nav-item:last-child {
     margin-right: 0; }
+  @media screen and (min-width: 480px) {
+    .nav-item {
+      display: table;
+      margin: 0 auto 0 auto; } }
 
 .content-background {
   width: 100%;
@@ -146,9 +189,57 @@ p {
   width: 100%;
   padding: 0;
   display: block;
-  margin-bottom: 40px; }
+  margin-bottom: 40px;
+  background: url(../img/bike-1.jpeg) no-repeat center center;
+  background-size: cover;
+  height: 200px; }
   .image-slider:last-child {
     margin-right: 0; }
+  @media screen and (min-width: 480px) {
+    .image-slider {
+      margin-top: 20px;
+      overflow: hidden;
+      position: relative;
+      background: none; } }
+
+.image-wrapper {
+  float: left;
+  display: block;
+  margin-right: 2.35765%;
+  width: 100%; }
+  .image-wrapper:last-child {
+    margin-right: 0; }
+  @media screen and (min-width: 480px) {
+    .image-wrapper {
+      float: left;
+      display: block;
+      margin-right: 2.35765%;
+      width: 31.76157%;
+      display: inline-block;
+      position: relative;
+      height: 200px; }
+      .image-wrapper:last-child {
+        margin-right: 0; }
+      .image-wrapper:nth-child(4n) {
+        margin-right: 0; }
+      .image-wrapper:nth-child(4n+1) {
+        clear: left; }
+      .image-wrapper::after {
+        clear: both;
+        content: "";
+        display: table; } }
+
+.image-wrapper-one {
+  background: url(../img/bike-1.jpeg) no-repeat center center;
+  background-size: cover; }
+
+.image-wrapper-two {
+  background: url(../img/bike-2.jpeg) no-repeat center center;
+  background-size: cover; }
+
+.image-wrapper-three {
+  background: url(../img/bike-3.jpeg) no-repeat center center;
+  background-size: cover; }
 
 .image-slider-image {
   float: left;
@@ -158,6 +249,13 @@ p {
   display: block; }
   .image-slider-image:last-child {
     margin-right: 0; }
+  @media screen and (min-width: 480px) {
+    .image-slider-image {
+      width: 100%;
+      display: block;
+      position: absolute;
+      top: 0;
+      bottom: 0; } }
 
 .about-us-title {
   display: block;

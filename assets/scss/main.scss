@@ -6,6 +6,8 @@ $logo-orange: rgba(236, 97, 47, 1);
 $logo-blue: rgba(27, 54, 106, 1);
 $logo-grey: rgba(224, 220, 208, 1);
 
+$desktop: new-breakpoint(min-width 480px 12);
+
 @font-face {
   font-family: "Orbitron";
   src: url("../Orbitron-Medium.ttf");
@@ -23,13 +25,17 @@ p {
 }
 
 .banner {
-  background: linear-gradient(rgba(250, 250, 250, 0.6), rgba(250, 250, 250, 0.6)), url(../img/maybe-another-background.jpeg) no-repeat center center;
+  background: linear-gradient(rgba(250, 250, 250, 0.8), rgba(250, 250, 250, 0.8)), url(../img/maybe-another-background.png) no-repeat center center;
   background-size: cover;
   padding-top: 10px;
   text-align: center;
   color: black;
   height: 250px;
   position: relative;
+
+  @include media($desktop) {
+    height: 400px;
+  }
 }
 
 .header-content {
@@ -38,11 +44,35 @@ p {
   transform: translateY(0);
 }
 
-.logo {
+.logo-container {
+  width: 100%;
+}
+
+.mobile-logo {
   width: 200px;
   padding: 10px;
   position: relative;
   background: rgba(0, 0, 0, .6);
+
+  @include media($desktop) {
+    position: absolute;
+    display: none;
+    visibility: none;
+  }
+}
+
+.desktop-logo {
+  display: none;
+
+  @include media($desktop) {
+    display: block;
+    text-align: center;
+    width: 80%;
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 5px;
+    background: rgba(0, 0, 0, .6);
+  }
 }
 
 .subtitle {
@@ -63,9 +93,12 @@ p {
   margin-top: 0;
   font-family: "Orbitron";
   position: relative;
-  top: 50%;
-  transform: translateY(10%);
   display: none;
+
+  @include media($desktop) {
+    display: inline;
+    float: left;
+  }
 }
 
 .title-break {
@@ -99,14 +132,21 @@ p {
 
 .nav-bar {
   height: 30px;
+  line-height: 30px;
+  vertical-align: middle;
   background: $logo-orange;
-  position: relative;
   margin-top: 5px;
   margin-bottom: 0;
   position: absolute;
   bottom: 0;
   left: 0;
   right: 0;
+
+  @include media($desktop) {
+    height: 50px;
+    text-align: center;
+    line-height: 50px;
+  }
 }
 
 .nav-items {
@@ -116,17 +156,26 @@ p {
   padding: 0;
   display: inline-block;
   position: relative;
-  top: 50%;
-  transform: translateY(-50%);
   font-family: "Orbitron";
   font-size: .8rem;
+
+  @include media($desktop) {
+    font-size: 1.3rem;
+    text-align: center;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    max-width: 600px;
+  }
 }
 
 .nav-link {
   text-transform: uppercase;
+  text-decoration: none;
+  color: white;
 }
 
-.nav-item:hover {
+.nav-link:hover {
   color: rgba(250, 250, 250, .6);
 }
 
@@ -135,6 +184,11 @@ p {
   display: inline-block;
   color: black;
   text-align: center;
+
+  @include media($desktop) {
+    display:table;
+    margin: 0 auto 0 auto;
+  }
 }
 
 .content-background {
@@ -151,11 +205,57 @@ p {
   padding: 0;
   display: block;
   margin-bottom: 40px;
+  background: url(../img/bike-1.jpeg) no-repeat center center;
+  background-size: cover;
+  height: 200px;
+
+  @include media($desktop) {
+    margin-top: 20px;
+    overflow: hidden;
+    position: relative;
+    background: none;
+  }
+}
+
+.image-wrapper {
+  @include span-columns(12);
+
+  @include media($desktop) {
+    @include span-columns(4 of 12);
+    @include omega(4n);
+    display: inline-block;
+    position: relative;
+    @include clearfix;
+    height: 200px;
+  }
+}
+
+.image-wrapper-one {
+  background: url(../img/bike-1.jpeg) no-repeat center center;
+  background-size: cover;
+}
+
+.image-wrapper-two {
+  background: url(../img/bike-2.jpeg) no-repeat center center;
+  background-size: cover;
+}
+
+.image-wrapper-three {
+  background: url(../img/bike-3.jpeg) no-repeat center center;
+  background-size: cover;
 }
 
 .image-slider-image {
   @include span-columns(12 of 12);
   display: block;
+
+  @include media($desktop) {
+    width: 100%;
+    display: block;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+  }
 }
 
 .about-us-title {
