@@ -198,6 +198,7 @@ p {
 
 .content-container {
   @include outer-container;
+  position: relative;
 }
 
 .image-slider {
@@ -205,9 +206,10 @@ p {
   padding: 0;
   display: block;
   margin-bottom: 40px;
-  background: url(../img/bike-1.jpeg) no-repeat center center;
+  // background: url(../img/bike-1.jpeg) no-repeat center center;
   background-size: cover;
   height: 200px;
+  position: relative;
 
   @include media($desktop) {
     margin-top: 20px;
@@ -218,11 +220,15 @@ p {
 }
 
 .image-wrapper {
-  @include span-columns(12);
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  right: 10px;
+  bottom: 10px;
 
   @include media($desktop) {
     @include span-columns(4 of 12);
-    @include omega(4n);
+    @include omega(3n);
     display: inline-block;
     position: relative;
     @include clearfix;
@@ -292,11 +298,47 @@ p {
   color: black;
   font-family: "Roboto";
   font-weight: 300;
+
+  @include media($desktop) {
+    color: white;
+  }
+}
+
+.desktop-large-split {
+  @include media($desktop) {
+    @include span-columns(8 of 12);
+  }
+}
+
+.about-us-side {
+  display: none;
+
+  @include media($desktop) {
+    display: inherit;
+  }
+}
+
+.desktop-small-split {
+  @include media($desktop) {
+    @include span-columns(4 of 12);
+    @include omega;
+    margin-top: -40px;
+    padding: 40px 10px 0 10px;
+    background: $logo-blue;
+    height: 100%;
+    color: white;
+  }
+}
+
+.about-us-contact {
+  @include media($desktop) {
+    padding: 300px 0 220px 0;
+    display: inline-block;
+  }
 }
 
 footer {
   background: $logo-grey;
-  padding: 10px;
+  padding: 30px 10px 10px 10px;
   text-align: center;
-  margin-top: 20px;
 }

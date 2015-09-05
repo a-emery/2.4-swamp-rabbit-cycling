@@ -176,7 +176,8 @@ p {
 .content-container {
   max-width: 68em;
   margin-left: auto;
-  margin-right: auto; }
+  margin-right: auto;
+  position: relative; }
   .content-container::after {
     clear: both;
     content: "";
@@ -190,9 +191,9 @@ p {
   padding: 0;
   display: block;
   margin-bottom: 40px;
-  background: url(../img/bike-1.jpeg) no-repeat center center;
   background-size: cover;
-  height: 200px; }
+  height: 200px;
+  position: relative; }
   .image-slider:last-child {
     margin-right: 0; }
   @media screen and (min-width: 480px) {
@@ -203,12 +204,11 @@ p {
       background: none; } }
 
 .image-wrapper {
-  float: left;
-  display: block;
-  margin-right: 2.35765%;
-  width: 100%; }
-  .image-wrapper:last-child {
-    margin-right: 0; }
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  right: 10px;
+  bottom: 10px; }
   @media screen and (min-width: 480px) {
     .image-wrapper {
       float: left;
@@ -220,9 +220,9 @@ p {
       height: 200px; }
       .image-wrapper:last-child {
         margin-right: 0; }
-      .image-wrapper:nth-child(4n) {
+      .image-wrapper:nth-child(3n) {
         margin-right: 0; }
-      .image-wrapper:nth-child(4n+1) {
+      .image-wrapper:nth-child(3n+1) {
         clear: left; }
       .image-wrapper::after {
         clear: both;
@@ -286,11 +286,48 @@ p {
   color: black;
   font-family: "Roboto";
   font-weight: 300; }
+  @media screen and (min-width: 480px) {
+    .contact-link {
+      color: white; } }
+
+@media screen and (min-width: 480px) {
+  .desktop-large-split {
+    float: left;
+    display: block;
+    margin-right: 2.35765%;
+    width: 65.88078%; }
+    .desktop-large-split:last-child {
+      margin-right: 0; } }
+
+.about-us-side {
+  display: none; }
+  @media screen and (min-width: 480px) {
+    .about-us-side {
+      display: inherit; } }
+
+@media screen and (min-width: 480px) {
+  .desktop-small-split {
+    float: left;
+    display: block;
+    margin-right: 2.35765%;
+    width: 31.76157%;
+    margin-right: 0;
+    margin-top: -40px;
+    padding: 40px 10px 0 10px;
+    background: #1b366a;
+    height: 100%;
+    color: white; }
+    .desktop-small-split:last-child {
+      margin-right: 0; } }
+
+@media screen and (min-width: 480px) {
+  .about-us-contact {
+    padding: 300px 0 220px 0;
+    display: inline-block; } }
 
 footer {
   background: #e0dcd0;
-  padding: 10px;
-  text-align: center;
-  margin-top: 20px; }
+  padding: 30px 10px 10px 10px;
+  text-align: center; }
 
 /*# sourceMappingURL=main.css.map */
