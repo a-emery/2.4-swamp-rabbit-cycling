@@ -205,10 +205,10 @@ p {
 
 .image-wrapper {
   position: absolute;
-  top: 10px;
-  left: 10px;
-  right: 10px;
-  bottom: 10px; }
+  top: 0px;
+  left: 0px;
+  right: 0px;
+  bottom: 0px; }
   @media screen and (min-width: 480px) {
     .image-wrapper {
       float: left;
@@ -300,7 +300,8 @@ p {
       margin-right: 0; } }
 
 .about-us-side {
-  display: none; }
+  display: none;
+  margin-top: 50px; }
   @media screen and (min-width: 480px) {
     .about-us-side {
       display: inherit; } }
